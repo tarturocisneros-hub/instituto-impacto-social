@@ -235,4 +235,8 @@
   .hamburger {
     display: flex;
   }
+
+  .logo img {
+    display: none;
+  }
 }
