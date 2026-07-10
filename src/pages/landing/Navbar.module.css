@@ -1,0 +1,238 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: transparent;
+  transition: background-color 300ms ease;
+  padding: 1rem 0;
+}
+
+.navbar.scrolled {
+  background-color: var(--primary);
+  box-shadow: var(--shadow-md);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 40px;
+  width: 40px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.navLink {
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.5rem;
+  min-height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 200ms ease;
+}
+
+.navLink:hover {
+  opacity: 0.8;
+}
+
+.authLinks {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.loginLink {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  min-height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 200ms ease;
+}
+
+.loginLink:hover {
+  opacity: 0.8;
+}
+
+.registerBtn {
+  background-color: var(--secondary);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.6rem 1.25rem;
+  min-height: 44px;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 200ms ease;
+}
+
+.registerBtn:hover {
+  background-color: var(--secondary-light);
+}
+
+/* Hamburger button - hidden on desktop */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--white);
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Mobile overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--primary);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 300ms ease, opacity 300ms ease;
+  pointer-events: none;
+}
+
+.overlay.overlayOpen {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlayHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: var(--white);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.overlayLinks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.overlayLink {
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 1.25rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.75rem 0;
+  min-height: 44px;
+  text-align: left;
+  transition: opacity 200ms ease;
+}
+
+.overlayLink:hover {
+  opacity: 0.8;
+}
+
+.overlayAuth {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+.overlayLoginLink {
+  color: var(--white);
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 0.75rem;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 200ms ease;
+}
+
+.overlayLoginLink:hover {
+  opacity: 0.8;
+}
+
+.overlayRegisterBtn {
+  background-color: var(--secondary);
+  color: var(--white);
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.85rem 1.5rem;
+  min-height: 44px;
+  border-radius: var(--radius);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 200ms ease;
+}
+
+.overlayRegisterBtn:hover {
+  background-color: var(--secondary-light);
+}
+
+/* Mobile breakpoint */
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+  }
+
+  .authLinks {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

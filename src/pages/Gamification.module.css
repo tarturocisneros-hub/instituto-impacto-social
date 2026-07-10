@@ -1,0 +1,194 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.page h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.levelCard {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  color: var(--white);
+  box-shadow: var(--shadow-lg);
+}
+
+.levelEmoji {
+  font-size: 3rem;
+}
+
+.levelInfo {
+  flex: 1;
+}
+
+.levelInfo h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.levelInfo p {
+  opacity: 0.9;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.progressBar {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--secondary);
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.progressLabel {
+  font-size: 0.75rem;
+  opacity: 0.8;
+  display: block;
+  margin-top: 0.25rem;
+}
+
+.section {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.section h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: 1rem;
+}
+
+.pointsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pointItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.pointItem:last-child {
+  border-bottom: none;
+}
+
+.pointValue {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--accent);
+  background: rgba(39, 174, 96, 0.1);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  min-width: 40px;
+  text-align: center;
+}
+
+.roadmap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.roadmapItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  background: var(--gray-100);
+  opacity: 0.6;
+  transition: all 0.2s;
+}
+
+.roadmapReached {
+  opacity: 1;
+  background: rgba(30, 58, 95, 0.05);
+  border: 1px solid rgba(30, 58, 95, 0.2);
+}
+
+.roadmapEmoji {
+  font-size: 1.5rem;
+}
+
+.roadmapPoints {
+  font-size: 0.8rem;
+  color: var(--gray-500);
+  display: block;
+}
+
+.badgesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.badgeCard {
+  text-align: center;
+  padding: 1.25rem;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--gray-200);
+  transition: all 0.2s;
+}
+
+.badgeEarned {
+  border-color: var(--accent);
+  background: #f0fdf4;
+}
+
+.badgeLocked {
+  opacity: 0.5;
+}
+
+.badgeIcon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.badgeCard h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: 0.25rem;
+}
+
+.badgeCard p {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+}
+
+.badgeCheck {
+  font-size: 0.75rem;
+  color: var(--accent);
+  font-weight: 600;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.empty {
+  color: var(--gray-400);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 1.5rem 0;
+}

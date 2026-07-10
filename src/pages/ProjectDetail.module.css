@@ -1,0 +1,372 @@
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: var(--gray-500);
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  color: var(--gray-600);
+  font-size: 0.9rem;
+  padding: 0;
+}
+
+.back:hover {
+  color: var(--primary);
+}
+
+.deleteBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  color: var(--danger);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s;
+}
+
+.deleteBtn:hover {
+  background: #fef2f2;
+}
+
+.headerCard {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.headerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.level {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--primary);
+}
+
+.status {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.borrador { background: var(--gray-200); color: var(--gray-700); }
+.en_revision { background: #fef3c7; color: #92400e; }
+.aprobado { background: #d1fae5; color: #065f46; }
+.en_progreso { background: #dbeafe; color: #1e40af; }
+.completado { background: #d1fae5; color: #065f46; }
+.pausado { background: #fce7f3; color: #9d174d; }
+
+.headerCard h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 0.5rem;
+}
+
+.desc {
+  color: var(--gray-600);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.metaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--gray-100);
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--gray-600);
+}
+
+.progressSection {
+  margin-top: 1rem;
+}
+
+.progressHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--gray-600);
+}
+
+.progressValue {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.progressBar {
+  height: 8px;
+  background: var(--gray-200);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-light));
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.progressBtns {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.progressBtn {
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-sm);
+  background: var(--gray-100);
+  color: var(--gray-600);
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.progressBtn:hover:not(:disabled) {
+  background: var(--accent);
+  color: var(--white);
+}
+
+.progressBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.section {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.section h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: 1rem;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sectionHeader h2 {
+  margin-bottom: 0;
+}
+
+.addBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: var(--secondary);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.addBtn:hover {
+  background: var(--secondary-light);
+}
+
+.empty {
+  color: var(--gray-400);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.milestoneList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.milestone {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--gray-200);
+}
+
+.milestoneCompleted {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.milestoneCheck {
+  background: none;
+  color: var(--gray-300);
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.milestoneCompleted .milestoneCheck {
+  color: var(--accent);
+}
+
+.milestoneTitle {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--gray-800);
+}
+
+.milestoneDate {
+  font-size: 0.75rem;
+  color: var(--gray-400);
+}
+
+.followUpForm {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.followUpForm select,
+.followUpForm textarea {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.followUpForm select:focus,
+.followUpForm textarea:focus {
+  border-color: var(--primary);
+}
+
+.followUpActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.cancelBtn {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  background: var(--gray-200);
+  color: var(--gray-700);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.saveBtn {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  background: var(--primary);
+  color: var(--white);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.saveBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.timelineItem {
+  display: flex;
+  gap: 0.75rem;
+  padding-left: 0.5rem;
+  border-left: 2px solid var(--gray-200);
+  padding-bottom: 0.5rem;
+}
+
+.timelineIcon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.timelineContent p {
+  font-size: 0.9rem;
+  color: var(--gray-700);
+  line-height: 1.5;
+}
+
+.timelineDate {
+  font-size: 0.75rem;
+  color: var(--gray-400);
+  display: block;
+  margin-top: 0.25rem;
+}
+
+.loadingSkeleton {
+  text-align: center;
+  padding: 2rem;
+  color: var(--gray-400);
+  font-size: 0.9rem;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.emptyState {
+  color: var(--gray-400);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 2rem 0;
+}

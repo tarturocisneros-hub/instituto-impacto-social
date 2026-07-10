@@ -1,0 +1,77 @@
+.container {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--gray-200);
+  box-shadow: var(--shadow);
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--gray-800);
+  margin: 0 0 1rem 0;
+}
+
+.lessonContent {
+  min-height: 8rem;
+  margin-bottom: 1.5rem;
+}
+
+.lessonContent p {
+  font-size: 0.95rem;
+  color: var(--gray-700);
+  line-height: 1.7;
+  margin: 0 0 1rem 0;
+}
+
+.lessonContent p:last-child {
+  margin-bottom: 0;
+}
+
+.completedSection {
+  padding: 1rem;
+  background: var(--gray-100);
+  border-radius: var(--radius);
+  border: 1px solid var(--gray-200);
+}
+
+.completedLabel {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 0.5rem 0;
+}
+
+.completedDate {
+  font-size: 0.8rem;
+  color: var(--gray-500);
+  margin: 0 0 0.75rem 0;
+}
+
+.reflectionReadonly {
+  font-size: 0.9rem;
+  color: var(--gray-700);
+  line-height: 1.6;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Responsive: reduce padding on mobile */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .lessonContent {
+    min-height: 6rem;
+  }
+}

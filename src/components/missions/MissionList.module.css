@@ -1,0 +1,121 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.summaryHeader {
+  font-size: 0.95rem;
+  color: var(--gray-600);
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.missionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.missionCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--gray-200);
+  background: var(--white);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.missionCard:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow);
+}
+
+.missionCardSelected {
+  border-color: var(--primary);
+  background: rgba(30, 58, 95, 0.04);
+  box-shadow: 0 0 0 2px rgba(30, 58, 95, 0.12);
+}
+
+.missionCardCompleted {
+  opacity: 0.75;
+  background: var(--gray-100);
+  border-color: var(--gray-200);
+}
+
+.missionCardCompleted:hover {
+  opacity: 1;
+}
+
+.statusIcon {
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.statusIconCompleted {
+  color: var(--accent);
+}
+
+.statusIconPending {
+  color: var(--gray-400);
+}
+
+.missionContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.missionTitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--gray-800);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.missionCardCompleted .missionTitle {
+  color: var(--gray-600);
+}
+
+.missionMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.missionPoints {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: rgba(39, 174, 96, 0.1);
+  padding: 0.125rem 0.4rem;
+  border-radius: var(--radius-sm);
+}
+
+.reflectionSnippet {
+  font-size: 0.8rem;
+  color: var(--gray-500);
+  margin-top: 0.35rem;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+/* Responsive: stack full width on mobile */
+@media (max-width: 768px) {
+  .missionCard {
+    width: 100%;
+    padding: 0.75rem;
+  }
+
+  .missionMeta {
+    flex-wrap: wrap;
+  }
+}

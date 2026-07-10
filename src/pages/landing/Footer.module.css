@@ -1,0 +1,131 @@
+.footer {
+  background-color: var(--primary-dark);
+  color: var(--white);
+  padding: 4rem 1rem 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  max-width: 100%;
+  object-fit: contain;
+  background-color: var(--gray-200);
+  border-radius: var(--radius-sm);
+}
+
+/* Placeholder for failed lazy-loaded images */
+.logo[src]::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.orgName {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.emailLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--white);
+  opacity: 0.85;
+  min-height: 44px;
+  font-size: 1rem;
+  transition: opacity 0.2s ease;
+}
+
+.emailLink:hover {
+  opacity: 1;
+}
+
+.socialLinks {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius);
+  color: var(--white);
+  opacity: 0.85;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+}
+
+.socialLink:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+.copyright {
+  font-size: 1rem;
+  color: var(--white);
+  opacity: 0.7;
+}
+
+/* Mobile: stack vertically */
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 1rem 1.5rem;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .brand {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .links {
+    align-items: center;
+  }
+
+  .socialLinks {
+    justify-content: center;
+  }
+}

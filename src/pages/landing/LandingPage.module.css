@@ -1,0 +1,15 @@
+.landingPage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.landingPage img {
+  max-width: 100%;
+  height: auto;
+}
+
+.main {
+  flex: 1;
+}
