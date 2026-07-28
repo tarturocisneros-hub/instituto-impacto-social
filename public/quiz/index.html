@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌍 Quiz: Índice de Impacto Social</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    
+    <!-- PANTALLA DE INICIO -->
+    <div class="screen active" id="start-screen">
+        <div class="card start-card">
+            <img src="logo.png" alt="Instituto de Impacto Social México" class="logo">
+            <h1 class="title">¿Qué tan Empresario Social eres?</h1>
+            <p class="subtitle">Índice de Impacto Social</p>
+            <p class="description">Descubre el impacto que generas como líder de tu negocio en tu entorno local</p>
+            <div class="categories-preview">
+                <span class="cat-tag">🌱 Producto con Propósito</span>
+                <span class="cat-tag">👥 Comunidad</span>
+                <span class="cat-tag">♻️ Medio Ambiente</span>
+                <span class="cat-tag">💼 Equipo & Familia</span>
+                <span class="cat-tag">🏘️ Liderazgo Local</span>
+            </div>
+            <button class="btn-start" onclick="showRegister()">
+                <span>¡Comenzar el Quiz!</span>
+            </button>
+            <p class="info-text">📋 11 preguntas · 5 minutos · Resultados con tu perfil personalizado</p>
+        </div>
+    </div>
+
+    <!-- PANTALLA DE REGISTRO -->
+    <div class="screen" id="register-screen">
+        <div class="card register-card">
+            <img src="logo.png" alt="Instituto de Impacto Social México" class="logo">
+            <h2 class="register-title">Cuéntanos sobre tu negocio</h2>
+            <p class="description">Esta información nos ayuda a generar el Índice de Impacto Social de tu región</p>
+            
+            <div class="form-group">
+                <label for="tipo-negocio">Tipo de negocio</label>
+                <select id="tipo-negocio" class="form-select" onchange="checkFormComplete()">
+                    <option value="">Selecciona tu giro...</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="estado">Estado</label>
+                <select id="estado" class="form-select" onchange="loadCities(); checkFormComplete();">
+                    <option value="">Selecciona tu estado...</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="ciudad">Ciudad</label>
+                <select id="ciudad" class="form-select" disabled onchange="checkFormComplete()">
+                    <option value="">Primero selecciona un estado...</option>
+                </select>
+            </div>
+
+            <button class="btn-start btn-continue" onclick="startQuizFromRegister()" id="btn-continue" disabled>
+                <span>Continuar al Quiz →</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- PANTALLA DE PREGUNTAS -->
+    <div class="screen" id="quiz-screen">
+        <div class="quiz-header">
+            <img src="logo.png" alt="Instituto de Impacto Social México" class="logo-small">
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+                <span class="progress-text" id="progress-text">1/11</span>
+            </div>
+        </div>
+
+        <div class="question-container" id="question-container">
+            <div class="category-badge" id="category-badge"></div>
+            <h2 class="question-number" id="question-number"></h2>
+            <p class="question-text" id="question-text"></p>
+            <div class="options-grid" id="options-grid"></div>
+        </div>
+    </div>
+
+    <!-- PANTALLA DE RESULTADOS -->
+    <div class="screen" id="results-screen">
+        <div class="results-card">
+            <div class="confetti-container" id="confetti-container"></div>
+            <img src="logo.png" alt="Instituto de Impacto Social México" class="logo">
+            <h2 class="result-title" id="result-title"></h2>
+            <div class="result-image-container" id="result-image"></div>
+            <div class="result-score-visual">
+                <div class="score-circle-container">
+                    <svg class="score-svg" viewBox="0 0 120 120">
+                        <defs>
+                            <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#6c63ff"/>
+                                <stop offset="100%" style="stop-color:#00d4aa"/>
+                            </linearGradient>
+                        </defs>
+                        <circle class="score-bg" cx="60" cy="60" r="52"/>
+                        <circle class="score-fill" cx="60" cy="60" r="52" id="score-ring"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="result-diagnosis" id="result-diagnosis"></div>
+            <div class="result-challenge" id="result-challenge"></div>
+            <div class="result-note" id="result-note"></div>
+            <button class="btn-start btn-retry" onclick="restartQuiz()">
+                <span>🔄 Intentar de nuevo</span>
+            </button>
+            <button class="btn-share" onclick="shareResults()">
+                <span>📤 Compartir resultado</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="mexico-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -35,6 +35,10 @@ export default function HeroSection() {
         <Link to="/plataforma/register" className={styles.ctaButton}>
           Únete al programa
         </Link>
+
+        <a href="/quiz" className={styles.quizLink}>
+          🧠 Inicia tu Test del Empresario Social
+        </a>
       </div>
     </section>
   );

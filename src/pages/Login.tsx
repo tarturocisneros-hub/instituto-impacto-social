@@ -20,7 +20,7 @@ export default function Login() {
     if (error) {
       setError('Credenciales inválidas. Intenta de nuevo.');
     } else {
-      navigate('/dashboard');
+      navigate('/plataforma/dashboard');
     }
     setLoading(false);
   };
