@@ -36,7 +36,7 @@ export default function HeroSection() {
           Únete al programa
         </Link>
 
-        <a href="/quiz" className={styles.quizLink}>
+        <a href="/quiz/" className={styles.quizLink}>
           🧠 Inicia tu Test del Empresario Social
         </a>
       </div>
