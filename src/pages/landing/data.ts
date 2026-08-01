@@ -99,8 +99,8 @@ export const testimonials: Testimonial[] = [
     statistic: "Talleres de pasta y pizza desde 0",
     quote:
       "Por medio de talleres de cocina inculcamos el valor del servicio y nuevas tradiciones entre familia y amigos.",
-    authorName: "Pasta Lab",
-    authorRole: "Emprendimiento social gastronómico",
+    authorName: "Alessandra García",
+    authorRole: "Fundadora de Pasta Lab",
     image: "/pastalab.png",
   },
 ];
