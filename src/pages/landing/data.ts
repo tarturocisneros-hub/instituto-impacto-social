@@ -94,6 +94,15 @@ export const testimonials: Testimonial[] = [
     authorRole: "Emprendedora social",
     image: "/foto-kayam.png",
   },
+  {
+    projectName: "Pasta Lab",
+    statistic: "Talleres de pasta y pizza desde 0",
+    quote:
+      "Por medio de talleres de cocina inculcamos el valor del servicio y nuevas tradiciones entre familia y amigos.",
+    authorName: "Pasta Lab",
+    authorRole: "Emprendimiento social gastronómico",
+    image: "/pastalab.png",
+  },
 ];
 
 export const socialLinks: SocialLink[] = [

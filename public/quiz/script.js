@@ -61,7 +61,7 @@ const questions = [
         id: 5,
         title: "Cadena de suministro y proveeduría",
         category: "🏘️ Liderazgo Local",
-        question: "A la hora de comprar café, papelería, insumos o servicios para tu operación diaria, ¿qué haces?",
+        question: "A la hora de comprar café, papelería (incluye empaques), insumos o servicios para tu operación diaria, ¿qué haces?",
         options: [
             { text: "Busco primero al negocio, tiendita o proveedor de la cuadra o de la ciudad para hacer crecer el consumo local.", points: 3 },
             { text: "Compro donde sea más barato o me quede más práctico, ya sea tienda local o gran cadena.", points: 2 },
@@ -96,9 +96,9 @@ const questions = [
         category: "💼 Equipo & Familia",
         question: "¿Cómo manejas el bienestar y el tiempo familiar de tu equipo?",
         options: [
-            { text: "Cuidamos los horarios para que todos tengan tiempo libre real, y organizamos pequeños detalles para integrarlos (talleres, una carnita asada, un día de campo o convivir con sus familias).", points: 3 },
+            { text: "Cuidamos los horarios para que todos tengan tiempo libre real, y organizamos actividades de integración con la familia (carnita asada, talleres para hijos, cursos para espos@s, o convivir con sus familiares).", points: 3 },
             { text: "Respetamos el horario laboral de ley y los dejamos salir a tiempo, pero cada quien por su lado fuera del trabajo.", points: 2 },
-            { text: "El ritmo a veces es pesado, se trabaja horas extra si es necesario y casi no hay espacio para la vida familiar.", points: 1 }
+            { text: "El ritmo a veces es pesado, se trabaja horas extra si es necesario.", points: 1 }
         ]
     },
     {
@@ -130,8 +130,8 @@ const questions = [
         question: "Ante peticiones de apoyo, patrocinios o causas locales (escuelas, vecinos, etc.):",
         options: [
             { text: "Siempre buscamos la forma de sumarnos, ya sea con producto, un descuento o difusión para causas de la zona.", points: 3 },
-            { text: "Solo apoyamos si de paso nos sirve como mención o publicidad directa para la marca.", points: 2 },
-            { text: "Decimos que no a ese tipo de solicitudes; no nos compete.", points: 1 }
+            { text: "Apoyamos cuando hay una colaboración que nos ayude a reforzar nuestra marca en redes.", points: 2 },
+            { text: "Normalmente no llevamos a cabo este tipo de actividades.", points: 1 }
         ]
     }
 ];
