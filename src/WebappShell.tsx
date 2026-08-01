@@ -9,6 +9,7 @@ import NewProject from './pages/NewProject';
 import ProjectDetail from './pages/ProjectDetail';
 import Profile from './pages/Profile';
 import Gamification from './pages/Gamification';
+import Analytics from './pages/Analytics';
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
   const { user, loading } = useAuth();
@@ -48,6 +49,7 @@ function WebappRoutes() {
         <Route path="projects/:id" element={<ProjectDetail />} />
         <Route path="profile" element={<Profile />} />
         <Route path="gamification" element={<Gamification />} />
+        <Route path="analytics" element={<Analytics />} />
       </Route>
       <Route path="*" element={<Navigate to="/plataforma/dashboard" replace />} />
     </Routes>

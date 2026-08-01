@@ -1,7 +1,7 @@
 import { Outlet, NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import {
-  LayoutDashboard, FolderKanban, PlusCircle, User, Trophy, LogOut, Menu, X
+  LayoutDashboard, FolderKanban, PlusCircle, User, Trophy, LogOut, Menu, X, BarChart3
 } from 'lucide-react';
 import { useState } from 'react';
 import styles from './Layout.module.css';
@@ -22,6 +22,7 @@ export default function Layout() {
     { to: '/plataforma/projects/new', icon: <PlusCircle size={20} />, label: 'Crear Proyecto' },
     { to: '/plataforma/gamification', icon: <Trophy size={20} />, label: 'Mi Avance' },
     { to: '/plataforma/profile', icon: <User size={20} />, label: 'Mi Perfil' },
+    ...(profile?.role === 'admin' ? [{ to: '/plataforma/analytics', icon: <BarChart3 size={20} />, label: '📊 Analytics' }] : []),
   ];
 
   return (

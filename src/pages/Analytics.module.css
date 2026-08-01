@@ -1,0 +1,200 @@
+.page {
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page h1 {
+  font-size: 1.75rem;
+  color: var(--gray-800);
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  color: var(--gray-500);
+  margin-bottom: 2rem;
+}
+
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.section h2 {
+  font-size: 1.25rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+/* Level Distribution */
+.levelGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.levelCard {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.levelCount {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.levelName {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+.levelPercent {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+}
+
+/* Questions */
+.questionsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.questionCard {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+}
+
+.questionTitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: 0.75rem;
+}
+
+.bars {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.barRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.barLabel {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+  width: 60px;
+  flex-shrink: 0;
+}
+
+.barTrack {
+  flex: 1;
+  height: 20px;
+  background: var(--gray-100);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.6s ease;
+}
+
+.barHigh {
+  background: var(--accent);
+}
+
+.barMedium {
+  background: #ffa726;
+}
+
+.barLow {
+  background: #ef5350;
+}
+
+.barValue {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gray-600);
+  width: 28px;
+  text-align: right;
+}
+
+/* States */
+.statesList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 400px;
+}
+
+.stateRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0.75rem;
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+}
+
+.stateCount {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* Table */
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.table th {
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  background: var(--gray-100);
+  color: var(--gray-700);
+  font-weight: 600;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.table td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--gray-100);
+  color: var(--gray-700);
+}
+
+.table tr:hover td {
+  background: var(--gray-50);
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 1rem;
+  }
+
+  .levelGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
