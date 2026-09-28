@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import HeroSection from './HeroSection';
 import MisionSection from './MisionSection';
 import ProgramasSection from './ProgramasSection';
+import BootcampSection from './BootcampSection';
 import TestimoniosSection from './TestimoniosSection';
 import FinalCTA from './FinalCTA';
 import Footer from './Footer';
@@ -56,6 +57,10 @@ export default function LandingPage() {
 
         <ErrorBoundary fallback={null}>
           <ProgramasSection />
+        </ErrorBoundary>
+
+        <ErrorBoundary fallback={null}>
+          <BootcampSection />
         </ErrorBoundary>
 
         <ErrorBoundary fallback={null}>

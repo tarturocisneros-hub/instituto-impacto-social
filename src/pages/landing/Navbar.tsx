@@ -6,6 +6,7 @@ import styles from './Navbar.module.css';
 const navLinks = [
   { label: 'Misión', anchor: 'mision' },
   { label: 'Programas', anchor: 'programas' },
+  { label: 'Bootcamp', anchor: 'bootcamp' },
   { label: 'Impacto', anchor: 'impacto' },
   { label: 'Testimonios', anchor: 'testimonios' },
 ];

@@ -127,3 +127,46 @@ export const socialLinks: SocialLink[] = [
 ];
 
 export const contactEmail = "contacto@impactosocialmexico.org";
+
+// --- Bootcamp de Emprendimiento Social ---
+
+export interface BootcampBenefit {
+  icon: string;        // lucide-react icon name
+  text: string;
+}
+
+export interface BootcampInfo {
+  title: string;
+  subtitle: string;
+  startDate: string;
+  duration: string;
+  modality: string;
+  benefits: BootcampBenefit[];
+}
+
+export const bootcampInfo: BootcampInfo = {
+  title: "Bootcamp de Emprendimiento Social",
+  subtitle:
+    "Dos días intensivos para impulsar tu proyecto social: conferencias con expertos, espacios de networking y momentos de esparcimiento junto a una comunidad de jóvenes que transforman México.",
+  startDate: "Próxima generación: Noviembre 2026",
+  duration: "2 días intensivos",
+  modality: "Sede presencial en Veracruz, México",
+  benefits: [
+    { icon: "Mic", text: "Conferencias con emprendedores y expertos sociales" },
+    { icon: "Users", text: "Espacios de networking con aliados y mentores" },
+    { icon: "PartyPopper", text: "Momentos de esparcimiento y convivencia" },
+    { icon: "Lightbulb", text: "Impulsa tu proyecto social desde la idea" },
+    { icon: "Award", text: "Certificado del Instituto de Impacto Social México" },
+    { icon: "HeartHandshake", text: "Acceso a la comunidad y red de exalumnos" },
+  ],
+};
+
+// Options for the registration form "tipo de proyecto" select field
+export const bootcampProjectTypes: string[] = [
+  "Tengo una idea, aún no la desarrollo",
+  "Ya tengo un prototipo o piloto",
+  "Tengo un proyecto en marcha (menos de 1 año)",
+  "Tengo un negocio o proyecto consolidado",
+  "Quiero sumarme a un proyecto existente",
+  "Todavía estoy explorando qué proyecto crear",
+];
