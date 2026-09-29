@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import { ErrorBoundary } from './pages/landing/ErrorBoundary';
 
 const LandingPage = React.lazy(() => import('./pages/landing/LandingPage'));
+const BootcampPage = React.lazy(() => import('./pages/landing/BootcampPage'));
 const WebappShell = React.lazy(() => import('./WebappShell'));
 
 function AppError() {
@@ -51,6 +52,13 @@ export default function App() {
         <Route path="/" element={
           <Suspense fallback={<LoadingSpinner />}>
             <LandingPage />
+          </Suspense>
+        } />
+
+        {/* Dedicated bootcamp registration landing (for ad campaigns) */}
+        <Route path="/bootcamp" element={
+          <Suspense fallback={<LoadingSpinner />}>
+            <BootcampPage />
           </Suspense>
         } />
 
