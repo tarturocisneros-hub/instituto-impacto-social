@@ -2,7 +2,7 @@ import { useState, useCallback } from 'react';
 import * as Icons from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { CheckCircle2, Calendar, Clock, MapPin, Loader2, GraduationCap } from 'lucide-react';
-import { supabase } from '../../lib/supabase';
+import { getBootcampClient } from '../../lib/bootcampClient';
 import { bootcampInfo, bootcampProjectTypes } from './data';
 import styles from './BootcampSection.module.css';
 
@@ -93,7 +93,12 @@ export default function BootcampSection() {
           return;
         }
 
-        const { error } = await supabase.from('bootcamp_registrations').insert({
+        const client = getBootcampClient();
+        if (!client) {
+          throw new Error('Supabase no está configurado en este entorno.');
+        }
+
+        const { error } = await client.from('bootcamp_registrations').insert({
           full_name: form.fullName.trim(),
           email: form.email.trim().toLowerCase(),
           phone: form.phone.trim(),
